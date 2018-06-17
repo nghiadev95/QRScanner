@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="LnU-SG-WmC">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Generate-->
+        <scene sceneID="1m3-oU-tUD">
+            <objects>
+                <viewController id="Jda-OW-AgM" customClass="GenerateViewController" customModule="QRScanner" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="URi-fg-ung">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OHn-qm-Zgc">
+                                <rect key="frame" x="95" y="40" width="264" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Content" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lhb-8O-hVd">
+                                <rect key="frame" x="16" y="45" width="62" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j6H-1R-xB4">
+                                <rect key="frame" x="140" y="86" width="94" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="B6c-B4-4sQ"/>
+                                </constraints>
+                                <state key="normal" title="Generate"/>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="2be-IA-fad">
+                                <rect key="frame" x="37.5" y="169" width="300" height="300"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="2be-IA-fad" secondAttribute="height" multiplier="1:1" id="63y-LH-tkE"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7VQ-MZ-pbK">
+                                <rect key="frame" x="157" y="528" width="60" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="Pzj-XP-eu6"/>
+                                    <constraint firstAttribute="width" constant="60" id="klM-t1-5Mf"/>
+                                </constraints>
+                                <state key="normal" title="Share"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="j6H-1R-xB4" firstAttribute="top" secondItem="OHn-qm-Zgc" secondAttribute="bottom" constant="16" id="1TQ-kR-sCk"/>
+                            <constraint firstItem="lhb-8O-hVd" firstAttribute="top" secondItem="cFZ-2t-6IN" secondAttribute="top" constant="25" id="24i-yv-GBE"/>
+                            <constraint firstItem="cFZ-2t-6IN" firstAttribute="bottom" secondItem="7VQ-MZ-pbK" secondAttribute="bottom" constant="45" id="4Sx-YW-Sbr"/>
+                            <constraint firstItem="j6H-1R-xB4" firstAttribute="width" secondItem="URi-fg-ung" secondAttribute="width" multiplier="1/4" id="4jI-62-35h"/>
+                            <constraint firstItem="j6H-1R-xB4" firstAttribute="centerX" secondItem="cFZ-2t-6IN" secondAttribute="centerX" id="60c-q4-gHo"/>
+                            <constraint firstItem="2be-IA-fad" firstAttribute="centerY" secondItem="cFZ-2t-6IN" secondAttribute="centerY" id="7En-RG-ViM"/>
+                            <constraint firstItem="OHn-qm-Zgc" firstAttribute="centerY" secondItem="lhb-8O-hVd" secondAttribute="centerY" id="Bix-et-7OX"/>
+                            <constraint firstItem="lhb-8O-hVd" firstAttribute="leading" secondItem="cFZ-2t-6IN" secondAttribute="leading" constant="16" id="HA6-37-jWY"/>
+                            <constraint firstItem="cFZ-2t-6IN" firstAttribute="trailing" secondItem="OHn-qm-Zgc" secondAttribute="trailing" constant="16" id="Ih4-j2-pRG"/>
+                            <constraint firstItem="7VQ-MZ-pbK" firstAttribute="centerX" secondItem="cFZ-2t-6IN" secondAttribute="centerX" id="JTi-dW-0tc"/>
+                            <constraint firstItem="2be-IA-fad" firstAttribute="width" secondItem="URi-fg-ung" secondAttribute="width" multiplier="4/5" id="MzI-Cg-V0r"/>
+                            <constraint firstItem="OHn-qm-Zgc" firstAttribute="leading" secondItem="lhb-8O-hVd" secondAttribute="trailing" constant="17" id="bmS-Hd-MaN"/>
+                            <constraint firstItem="2be-IA-fad" firstAttribute="centerX" secondItem="cFZ-2t-6IN" secondAttribute="centerX" id="uo3-5X-h1r"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="cFZ-2t-6IN"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Generate" id="TEj-1i-OfG"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="h6L-uy-VH4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-18.399999999999999" y="450.22488755622192"/>
+        </scene>
+        <!--Recognize-->
+        <scene sceneID="heB-tO-nbD">
+            <objects>
+                <viewController id="oKA-zR-nda" customClass="RecognizeViewController" customModule="QRScanner" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="rwX-RL-59f">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="whE-L2-nxj"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Recognize" id="RsJ-bY-ai2"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8LN-Oq-GX6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-17" y="-212"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="f8b-c2-HFe">
+            <objects>
+                <tabBarController id="LnU-SG-WmC" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="qaG-Uo-aHD">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="oKA-zR-nda" kind="relationship" relationship="viewControllers" id="PHk-9v-2gn"/>
+                        <segue destination="Jda-OW-AgM" kind="relationship" relationship="viewControllers" id="20d-rg-cfo"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="j3X-Gw-nLe" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-969" y="120"/>
+        </scene>
+    </scenes>
+</document>

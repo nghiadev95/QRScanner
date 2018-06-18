@@ -7,5 +7,6 @@ target 'QRScanner' do
 
   # Pods for QRScanner
   pod 'RSBarcodes_Swift', '~> 4.0.0'
+  pod 'CZPicker'
 
 end

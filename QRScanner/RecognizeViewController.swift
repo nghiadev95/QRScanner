@@ -65,12 +65,7 @@ class RecognizeViewController: UIViewController {
         if captureSession.canAddOutput(captureMetadataOutput) {
             captureSession.addOutput(captureMetadataOutput)
             captureMetadataOutput.setMetadataObjectsDelegate(self, queue: .main)
-            autoreleasepool {
-                let types = NSMutableArray(array: captureMetadataOutput.availableMetadataObjectTypes)
-                types.remove(AVMetadataObject.ObjectType.dataMatrix)
-                types.remove(AVMetadataObject.ObjectType.face)
-                captureMetadataOutput.metadataObjectTypes = NSArray(array: types) as! [AVMetadataObject.ObjectType]
-            }
+            captureMetadataOutput.metadataObjectTypes = UtilsFunction.getListObjectTypeSupported()
         }
     }
     
@@ -100,8 +95,7 @@ class RecognizeViewController: UIViewController {
         if data.stringValue != nil {
             AudioServicesPlaySystemSound(SystemSoundID(kSystemSoundID_Vibrate))
             isShowingResult = true
-            let type = data.type.rawValue.split(separator: ".")
-            let barcodeType = String(type.last ?? "Not found")
+            let barcodeType = UtilsFunction.getObjectTypeName(type: data.type)
             showResult(title: barcodeType, message: data.stringValue!)
         }
     }

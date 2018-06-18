@@ -15,6 +15,7 @@
 		4294D88F20D531FA00A2C6FF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4294D88E20D531FA00A2C6FF /* Assets.xcassets */; };
 		4294D89220D531FA00A2C6FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4294D89020D531FA00A2C6FF /* LaunchScreen.storyboard */; };
 		4294D89A20D53AE300A2C6FF /* GenerateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4294D89920D53AE300A2C6FF /* GenerateViewController.swift */; };
+		42FF93C920D6491A00960E94 /* UtilsFunction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42FF93C820D6491A00960E94 /* UtilsFunction.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +28,7 @@
 		4294D89120D531FA00A2C6FF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4294D89320D531FA00A2C6FF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4294D89920D53AE300A2C6FF /* GenerateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenerateViewController.swift; sourceTree = "<group>"; };
+		42FF93C820D6491A00960E94 /* UtilsFunction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UtilsFunction.swift; sourceTree = "<group>"; };
 		5F2FB465857081B4AA60E927 /* Pods-QRScanner.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QRScanner.debug.xcconfig"; path = "Pods/Target Support Files/Pods-QRScanner/Pods-QRScanner.debug.xcconfig"; sourceTree = "<group>"; };
 		B839A951481D5FC4B1E7D8EC /* Pods_QRScanner.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_QRScanner.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C469E15AD2DB2CAFA14FF294 /* Pods-QRScanner.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QRScanner.release.xcconfig"; path = "Pods/Target Support Files/Pods-QRScanner/Pods-QRScanner.release.xcconfig"; sourceTree = "<group>"; };
@@ -81,6 +83,7 @@
 		4294D88620D531F900A2C6FF /* QRScanner */ = {
 			isa = PBXGroup;
 			children = (
+				42FF93C720D648FB00960E94 /* Utils */,
 				427D135220D56DE2002148FF /* Libs */,
 				4294D88720D531F900A2C6FF /* AppDelegate.swift */,
 				4294D88920D531F900A2C6FF /* RecognizeViewController.swift */,
@@ -91,6 +94,14 @@
 				4294D89320D531FA00A2C6FF /* Info.plist */,
 			);
 			path = QRScanner;
+			sourceTree = "<group>";
+		};
+		42FF93C720D648FB00960E94 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				42FF93C820D6491A00960E94 /* UtilsFunction.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 		8FDCFECB16645D8A89DDD53D /* Frameworks */ = {
@@ -186,10 +197,12 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-QRScanner/Pods-QRScanner-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/CZPicker/CZPicker.framework",
 				"${BUILT_PRODUCTS_DIR}/RSBarcodes_Swift/RSBarcodes_Swift.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CZPicker.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RSBarcodes_Swift.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -222,6 +235,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				42FF93C920D6491A00960E94 /* UtilsFunction.swift in Sources */,
 				4294D88A20D531F900A2C6FF /* RecognizeViewController.swift in Sources */,
 				427D135520D56DF8002148FF /* Toast.swift in Sources */,
 				4294D89A20D53AE300A2C6FF /* GenerateViewController.swift in Sources */,
@@ -374,7 +388,10 @@
 				DEVELOPMENT_TEAM = 9R6APF66GF;
 				INFOPLIST_FILE = QRScanner/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.quangnghiadev95.QRScanner;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -391,7 +408,10 @@
 				DEVELOPMENT_TEAM = 9R6APF66GF;
 				INFOPLIST_FILE = QRScanner/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.quangnghiadev95.QRScanner;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
